@@ -5,13 +5,13 @@ export const Menu = ()=>{
         <div>
             <ul className="mainMenu">
                 <li>
-                    <NavLink to="/light">Easy</NavLink>
+                    <NavLink className="mainMenu__link" to="/light">Easy</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/middle">Medium</NavLink>
+                    <NavLink className="mainMenu__link" to="/middle">Medium</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/pro">Hard</NavLink>
+                    <NavLink className="mainMenu__link" to="/pro">Hard</NavLink>
                 </li>
             </ul>
             

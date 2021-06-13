@@ -5,10 +5,10 @@ import { Menu } from './components/main/menu';
 
 function App() {
   return (
-    <div className="App wrap">
-    <div class="container">
-      <Route path={["/", "/menu"]} render={()=> <Menu />}/>
-    </div>
+    <div className="App">
+      <div>
+        <Route path={["/", "/menu"]} render={() => <Menu />} />
+      </div>
     </div>
   );
 }

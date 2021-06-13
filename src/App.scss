@@ -1,21 +1,41 @@
-@font-face {
-  font-family: 'Neucha';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Neucha'),
-       url('./fonts/neucha-v12-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/neucha-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/neucha-v12-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/neucha-v12-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/neucha-v12-latin_cyrillic-regular.svg#Neucha') format('svg'); /* Legacy iOS */
-}
-body{
-  font-family: 'Neucha';
-  font-style: normal;
-  font-weight: 400;
+$colorMainMenuLink: red;
+$fontUrl: "./fonts/neucha-v12-latin_cyrillic-regular.";
+$bgWrap: rgb(194, 255, 255);
+
+@mixin wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgWrap;
 }
 
-td{
+@font-face {
+  font-family: "Neucha";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Neucha"), url($fontUrl + "eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url($fontUrl + "woff2") format("woff2"),
+    /* Super Modern Browsers */ url($fontUrl + "woff") format("woff"),
+    /* Modern Browsers */ url($fontUrl + "ttf") format("truetype"),
+    /* Safari, Android, iOS */ url($fontUrl + "svg#Neucha") format("svg"); /* Legacy iOS */
+}
+body {
+  font-family: "Neucha";
+  font-style: normal;
+  font-weight: 400;
+}
+.App {
+  @include wrap();
+  min-height: 100vh;
+}
+td {
   border: 1px solid black;
   padding: 120px;
+}
+.mainMenu {
+  margin: auto;
+
+  .mainMenu__link {
+    color: $colorMainMenuLink;
+  }
 }
