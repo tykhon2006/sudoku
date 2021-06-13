@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Route } from 'react-router';
+import './App.scss';
+import { Menu } from './components/main/menu';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Sudoku</h1>
-     <h2>game</h2>
+    <div className="App wrap">
+    <div class="container">
+      <Route path={["/", "/menu"]} render={()=> <Menu />}/>
+    </div>
     </div>
   );
 }
