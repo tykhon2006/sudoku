@@ -5,7 +5,7 @@ export const Menu = ()=>{
         <div>
             <ul className="mainMenu">
                 <li>
-                    <NavLink className="mainMenu__link" to="/light">Easy</NavLink>
+                    <NavLink className="mainMenu__link" to="/easy">Easy</NavLink>
                 </li>
                 <li>
                     <NavLink className="mainMenu__link" to="/middle">Medium</NavLink>

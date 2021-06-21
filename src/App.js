@@ -1,14 +1,14 @@
 
 import { Route } from 'react-router';
 import './App.scss';
-import { Menu } from './components/main/menu';
+import { Menu } from './components/main/Menu';
+import { Easy } from './components/main/Easy';
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <Route path={["/", "/menu"]} render={() => <Menu />} />
-      </div>
+        <Route path={["/", "/menu"]} exact render={() => <Menu />} />
+        <Route path="/easy" render={()=> <Easy />} />
     </div>
   );
 }

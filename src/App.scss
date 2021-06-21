@@ -1,7 +1,14 @@
-$colorMainMenuLink: red;
+$colorMainMenuLink: rgb(255, 134, 134);
 $fontUrl: "./fonts/neucha-v12-latin_cyrillic-regular.";
 $bgWrap: rgb(194, 255, 255);
+$bigText: 40px;
+$center: center;
 
+@mixin container {
+  max-width: 768px;
+  width: 95%;
+
+}
 @mixin wrap {
   display: flex;
   align-items: center;
@@ -27,10 +34,23 @@ body {
 .App {
   @include wrap();
   min-height: 100vh;
+  font-size: $bigText;
+}
+.easy{
+  @include container();
+}
+.table{
+  width: 100%;
+  border-collapse: collapse;
 }
 td {
   border: 1px solid black;
-  padding: 120px;
+  text-align: $center;
+}
+li {
+  list-style: none;
+  margin: 50px;
+  text-align: $center;
 }
 .mainMenu {
   margin: auto;
